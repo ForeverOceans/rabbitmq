@@ -87,7 +87,7 @@ action :add do
     execute "rabbitmqctl add_user #{new_resource.user}" do # ~FC009
       #sensitive true    comment out senstive so it runs on Chef 11.10
       command cmd
-      Chef::Log.info "Adding RabbitMQ user '#{new_resource.user}'."
+      Chef::Log.info "Adding RabbitMQ user '#{new_resource.user}' '#{new_password}' '#{new_resource.password}'."
     end
   end
 end
